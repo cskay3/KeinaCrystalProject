@@ -35,4 +35,7 @@ public class Text {
     //---
     //
     //If you'd like, I can show the payoff matrix visually to make it clearer.
+
+    //1 character class (points, name, description)
+    //4 different commands (methods in itself) for different strategies
 }
