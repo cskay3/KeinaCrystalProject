@@ -22,7 +22,7 @@ public static void add() throws IOException {
 
     ArrayList<String> pos = new ArrayList<>();
 
-    while (pos.hasNext()){
+    while (po.hasNext()){
         pos.add(po.nextLine());
     }
 
