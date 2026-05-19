@@ -8,13 +8,14 @@ public class ToneReader {
     static Scanner myScanner = new Scanner(System.in);
     add();
 
-    public static ArrayList<String> POS(){
+    public static String posOrNeg(){
         ArrayList
 
     }
 
+    public
 
-}
+
 
 public static void add() throws IOException {
     File positive = new File("positive.txt");
