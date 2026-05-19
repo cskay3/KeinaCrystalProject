@@ -1,7 +1,8 @@
 public class ToneReader {
 
 
-    public String POS(){
-        nouns pronouns verbs adjectives adverbs [rp[osition conjuctions interjections
+    public static Arraylist<String> POS(){
+        //nouns pronouns verbs adjectives adverbs preposition conjuctions interjections numeral article determiner
+        ArrayList<String> article = ["a", "an", "the"];
     }
 }
