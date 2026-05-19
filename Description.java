@@ -1,0 +1,3 @@
+public class Description {
+    // Our code will read a text file and determine the emotions related to the text's contents.
+}
