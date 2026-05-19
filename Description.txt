@@ -1,1 +1,1 @@
-Our code will read a text file and determine the emotions related to the text's contents.
+Our code will read a text file and determine whether the text's contents are positive or negative.
