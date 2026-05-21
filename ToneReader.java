@@ -9,7 +9,7 @@ public class ToneReader {
     add();
 
     public static String posOrNeg(){
-        ArrayList
+        ArrayList<String> = []
 
     }
 
