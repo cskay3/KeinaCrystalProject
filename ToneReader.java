@@ -9,28 +9,45 @@ public class ToneReader {
     System.out.println("Type your comment here:");
     String userInput = myScanner.next().toLowerCase();
 
-    public static void add() throws IOException {
+    public static void addpos() throws IOException {
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
 
         ArrayList<String> pos = new ArrayList<>();
 
-        while (po.hasNext()){
+        while (po.hasNext()) {
             pos.add(po.nextLine());
         }
 
     }
 
-    public static boolean posOrNeg(){
-        boolean positive = false
+    public static void addneg() throws IOException {
+        File negative = new File("negative.txt");
+        Scanner ne = new Scanner(negative);
 
-        for (String word : pos){
-            if (userInput.indexOf(word) > -1){
-                positive = true;
-            }
+        ArrayList<String> neg = new ArrayList<>();
+
+        while (ne.hasNext()) {
+            neg.add(po.nextLine());
         }
-        return postitive;
     }
 
-    public
+    public static void posOrNeg() {
+        for (String word : pos) {
+            if (userInput.indexOf(word) > -1) {
+                System.out.println("positive");
+                break;
+            }
+        }
+        for (String word : neg) {
+            if (userInput.indexOf(word) > -1) {
+                System.out.println("negative");
+                break;
+            }
+        }
+
+        else {
+            System.out.println("neutral");
+        }
+    }
 }
