@@ -7,7 +7,7 @@ public class ToneReader {
 
     static Scanner myScanner = new Scanner(System.in);
     System.out.println("Type your comment here:");
-    String userInput = myScanner.next)().toLowerCase();
+    String userInput = myScanner.next().toLowerCase();
 
     public static void add() throws IOException {
         File positive = new File("positive.txt");
