@@ -31,7 +31,7 @@ public class KeinaCyrstalProject {
         ArrayList<String> neg = new ArrayList<String>();
 
         while (ne.hasNext()) {
-            neg.add(po.nextLine());
+            neg.add(ne.nextLine());
         }
             for (String word : pos) {
                 if (userInput.indexOf(word) > -1) {
