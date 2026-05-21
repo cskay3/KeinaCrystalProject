@@ -46,9 +46,8 @@ public class KeinaCyrstalProject {
                 break;
             }
         }
+        System.out.println("neutral");
 
-        else {
-            System.out.println("neutral");
         }
     }
 }
