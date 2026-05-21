@@ -5,6 +5,10 @@ import java.util.ArrayList;
 
 public class KeinaCyrstalProject {
 
+    public static void main(String[] args) {
+        posOrNeg();
+    }
+
     static Scanner myScanner = new Scanner(System.in);
 
     System.out.println("Type your comment here:");
