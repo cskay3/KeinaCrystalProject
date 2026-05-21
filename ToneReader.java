@@ -25,15 +25,11 @@ public class ToneReader {
         boolean positive = false
 
         for (String word : pos){
-            if (userInput.indexOf(word) == -1){
-                return positive;
-            }
-
-            else(){
+            if (userInput.indexOf(word) > -1){
                 positive = true;
-                return positive;
             }
         }
+        return postitive;
     }
 
     public
