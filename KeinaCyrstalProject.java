@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.util.Scanner;
 import java.io.IOException;
@@ -33,19 +32,20 @@ public class KeinaCyrstalProject {
         while (ne.hasNext()) {
             neg.add(po.nextLine());
         }
-            for (String word : pos) {
-                if (userInput.indexOf(word) > -1) {
-                    System.out.println("positive");
-                    break;
-                }
+
+        for (String word : pos) {
+            if (userInput.indexOf(word) > -1) {
+                System.out.println("positive");
+                break;
             }
-            for (String word : neg) {
-                if (userInput.indexOf(word) > -1) {
-                    System.out.println("negative");
-                    break;
-                }
-            }
-            System.out.println("neutral");
         }
+        for (String word : neg) {
+            if (userInput.indexOf(word) > -1) {
+                System.out.println("negative");
+                break;
+            }
+        }
+        System.out.println("neutral");
     }
+}
 
