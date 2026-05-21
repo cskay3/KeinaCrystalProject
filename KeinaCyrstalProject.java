@@ -1,3 +1,5 @@
+import jdk.nashorn.internal.ir.LexicalContext;
+
 import java.io.File;
 import java.util.Scanner;
 import java.io.IOException;
@@ -5,16 +7,16 @@ import java.util.ArrayList;
 
 public class KeinaCyrstalProject {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         posOrNeg();
+
     }
 
-    static Scanner myScanner = new Scanner(System.in);
-
-    System.out.println("Type your comment here:");
-    String userInput = myScanner.next().toLowerCase();
 
     public static void posOrNeg() throws IOException{
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Type your comment here: ");
+        String userInput = myScanner.next().toLowerCase();
 
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
@@ -33,22 +35,19 @@ public class KeinaCyrstalProject {
         while (ne.hasNext()) {
             neg.add(po.nextLine());
         }
-
-        for (String word : pos) {
-            if (userInput.indexOf(word) > -1) {
-                System.out.println("positive");
-                break;
+            for (String word : pos) {
+                if (userInput.indexOf(word) > -1) {
+                    System.out.println("positive");
+                    break;
+                }
             }
-        }
-        for (String word : neg) {
-            if (userInput.indexOf(word) > -1) {
-                System.out.println("negative");
-                break;
+            for (String word : neg) {
+                if (userInput.indexOf(word) > -1) {
+                    System.out.println("negative");
+                    break;
+                }
             }
-        }
-
-        else {
             System.out.println("neutral");
         }
     }
-}
+
