@@ -6,10 +6,11 @@ import java.util.ArrayList;
 public class ToneReader {
 
     static Scanner myScanner = new Scanner(System.in);
-    add();
+    System.out.println("Type your comment here:");
+    String userInput = myScanner.next)().toLowerCase();
+
 
     public static String posOrNeg(){
-        if
 
     }
 
