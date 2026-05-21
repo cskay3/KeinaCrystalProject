@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class ToneReader {
 
     public static void main(String[] args) {
-
+        posOrNeg();
     }
 
     static Scanner myScanner = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class ToneReader {
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
 
-        ArrayList<String> pos = new ArrayList<>();
+        ArrayList<String> pos = new ArrayList<String>();
 
         while (po.hasNext()) {
             pos.add(po.nextLine());
@@ -29,10 +29,10 @@ public class ToneReader {
         File negative = new File("negative.txt");
         Scanner ne = new Scanner(negative);
 
-        ArrayList<String> neg = new ArrayList<>();
+        ArrayList<String> neg = new ArrayList<String>();
 
         while (ne.hasNext()) {
-            neg.add(po.nextLine());
+            neg.add(ne.nextLine());
         }
     }
 
