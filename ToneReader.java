@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ToneReader {
+    private String
 
     static Scanner myScanner = new Scanner(System.in);
     System.out.println("Type your comment here:");
@@ -22,7 +23,7 @@ public class ToneReader {
     }
 
     public static boolean posOrNeg(){
-        boolean positive = false
+        boolean positive = false;
 
         for (String word : pos){
             if (userInput.indexOf(word) > -1){
