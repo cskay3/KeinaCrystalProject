@@ -9,14 +9,10 @@ public class KeinaCyrstalProject {
         posOrNeg();
     }
 
-    public static void posOrNeg() throws IOException{
+    public static void posOrNeg() throws IOException {
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Type your comment here: ");
         String userInput = myScanner.nextLine().toLowerCase();
-
-        ArrayList<String> userInputArray = new ArrayList<String>();
-        userInputArray.add();
-
 
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
@@ -36,33 +32,34 @@ public class KeinaCyrstalProject {
             neg.add(ne.nextLine());
         }
 
+        int counter = 0;
+        int tbd = 5;
+
         for (String word : pos) {
+            counter++;
             if (userInput.indexOf(word) > -1) {
                 System.out.println("positive");
                 break;
             }
+            if (counter == pos.size()) {
+                tbd = 0;
+            }
 
-            for (String word1 : userInputArray) {
-                if (!word1.equals(word)) {
-                    System.out.println("neutral");
+            for (String word1 : neg) {
+                counter++;
+                if (userInput.indexOf(word1) > -1) {
+                    System.out.println("negative");
                     break;
                 }
+                if (counter == neg.size()) {
+                    tbd = 0;
+                }
+
             }
         }
 
-        for (String word : neg) {
-            if (userInput.indexOf(word) > -1) {
-                System.out.println("negative");
-                break;
-            }
-
-            for (String word1 : userInputArray) {
-                if (!word1.equals(word)) {
-                    System.out.println("neutral");
-                    break;
-                }
-            }
+        if (tbd == 0){
+            System.out.println("neutral");
         }
     }
 }
-
