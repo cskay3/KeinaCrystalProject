@@ -40,6 +40,10 @@ public class KeinaCyrstalProject {
                 System.out.println("neutral");
                 break;
             }
+            else {
+                System.out.println("neutral");
+                break;
+            }
         }
 
             for (String word1 : neg) {
