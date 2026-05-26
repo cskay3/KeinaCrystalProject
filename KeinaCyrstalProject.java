@@ -36,10 +36,14 @@ public class KeinaCyrstalProject {
             if (userInput.indexOf(word) > -1) {
                 System.out.println("positive");
                 break;
+            } else {
+                System.out.println("neutral");
+                break;
             }
+        }
 
             for (String word1 : neg) {
-                if (userInput.indexOf(word) > -1) {
+                if (userInput.indexOf(word1) > -1) {
                     System.out.println("negative");
                     break;
                 }
