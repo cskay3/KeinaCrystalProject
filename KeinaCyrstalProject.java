@@ -12,7 +12,7 @@ public class KeinaCyrstalProject {
     public static void posOrNeg() throws IOException{
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Type your comment here: ");
-        String userInput = myScanner.next().toLowerCase();
+        String userInput = myScanner.nextLine().toLowerCase();
 
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
