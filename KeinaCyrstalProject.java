@@ -14,10 +14,6 @@ public class KeinaCyrstalProject {
         System.out.println("Type your comment here: ");
         String userInput = myScanner.nextLine().toLowerCase();
 
-        ArrayList<String> userInputArray = new ArrayList<String>();
-        userInputArray.add();
-
-
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
 
