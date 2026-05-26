@@ -32,25 +32,41 @@ public class KeinaCyrstalProject {
             neg.add(ne.nextLine());
         }
 
-        outterloop:
+        int counterpos = 0;
+        int counterneg = 0;
+        int tbd = 5;
+
+        outerloop:
         for (String word : pos) {
             if (userInput.indexOf(word) > -1) {
                 System.out.println("positive");
-                break outterloop;
+                break outerloop;
             }
+            counterpos++;
 
-            outterloop1:
+            if (counterpos == pos.size()) {
+                tbd = 0;
+            }
+        }
+        outerloop1:
             for (String word1 : neg) {
                 if (userInput.indexOf(word1) > -1) {
                     System.out.println("negative");
-                    break outterloop1;
+                    break outerloop1;
+                }
+                counterneg++;
+
+                if (counterneg == neg.size()) {
+                    tbd = 1;
                 }
 
-                else {
-                    System.out.println("neutral");
-                    break outterloop1;
-                }
             }
+
+        }
+
+
+        if (tbd == 0 || tbd == 1){
+            System.out.println("neutral");
         }
     }
-}
+
