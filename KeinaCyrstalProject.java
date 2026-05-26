@@ -15,7 +15,7 @@ public class KeinaCyrstalProject {
         String userInput = myScanner.nextLine().toLowerCase();
 
         ArrayList<String> userInputArray = new ArrayList<String>();
-        userInputArray.add(userInput);
+        userInputArray.add();
 
 
         File positive = new File("positive.txt");
