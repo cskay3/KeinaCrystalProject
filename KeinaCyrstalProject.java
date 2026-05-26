@@ -14,6 +14,10 @@ public class KeinaCyrstalProject {
         System.out.println("Type your comment here: ");
         String userInput = myScanner.nextLine().toLowerCase();
 
+        ArrayList<String> userInputArray = new ArrayList<String>();
+        userInputArray.add(userInput);
+
+
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
 
@@ -36,22 +40,24 @@ public class KeinaCyrstalProject {
             if (userInput.indexOf(word) > -1) {
                 System.out.println("positive");
                 break;
-            } else {
-                System.out.println("neutral");
-                break;
             }
-            else {
-                System.out.println("neutral");
-                break;
+
+            for (String word1 : userInputArray) {
+                if (!word1.equals(word)) {
+                    System.out.println("neutral");
+                    break;
+                }
             }
         }
 
-            for (String word1 : neg) {
-                if (userInput.indexOf(word1) > -1) {
-                    System.out.println("negative");
-                    break;
-                }
-                else {
+        for (String word : neg) {
+            if (userInput.indexOf(word) > -1) {
+                System.out.println("negative");
+                break;
+            }
+
+            for (String word1 : userInputArray) {
+                if (!word1.equals(word)) {
                     System.out.println("neutral");
                     break;
                 }
