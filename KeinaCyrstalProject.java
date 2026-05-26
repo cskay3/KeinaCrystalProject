@@ -52,13 +52,13 @@ public class KeinaCyrstalProject {
                     break;
                 }
                 if (counter == neg.size()) {
-                    tbd = 0;
+                    tbd = 1;
                 }
 
             }
         }
 
-        if (tbd == 0){
+        if (tbd == 0 || tbd == 1){
             System.out.println("neutral");
         }
     }
