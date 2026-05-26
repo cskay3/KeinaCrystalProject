@@ -37,26 +37,12 @@ public class KeinaCyrstalProject {
                 System.out.println("positive");
                 break;
             }
-
-            for (String word1 : userInputArray) {
-                if (!word1.equals(word)) {
-                    System.out.println("neutral");
-                    break;
-                }
-            }
         }
 
         for (String word : neg) {
             if (userInput.indexOf(word) > -1) {
                 System.out.println("negative");
                 break;
-            }
-
-            for (String word1 : userInputArray) {
-                if (!word1.equals(word)) {
-                    System.out.println("neutral");
-                    break;
-                }
             }
         }
     }
