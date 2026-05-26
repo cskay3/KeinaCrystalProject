@@ -64,6 +64,7 @@ public class KeinaCyrstalProject {
 
         }
 
+
         if (tbd == 0 || tbd == 1){
             System.out.println("neutral");
         }
