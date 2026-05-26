@@ -9,7 +9,6 @@ public class KeinaCyrstalProject {
         posOrNeg();
     }
 
-
     public static void posOrNeg() throws IOException{
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Type your comment here: ");
@@ -38,16 +37,16 @@ public class KeinaCyrstalProject {
                 System.out.println("positive");
                 break;
             }
-        }
 
-        for (String word : neg) {
-            if (userInput.indexOf(word) > -1) {
-                System.out.println("negative");
-                break;
-            }
-            else {
-                System.out.println("neutral");
-                break;
+            for (String word1 : neg) {
+                if (userInput.indexOf(word) > -1) {
+                    System.out.println("negative");
+                    break;
+                }
+                else {
+                    System.out.println("neutral");
+                    break;
+                }
             }
         }
     }
