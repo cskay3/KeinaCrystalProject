@@ -13,7 +13,6 @@ public class KeinaCyrstalProject {
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Type your comment here: ");
         String userInput = myScanner.nextLine().toLowerCase();
-        System.out.println(userInput);
 
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
@@ -34,20 +33,30 @@ public class KeinaCyrstalProject {
         }
 
         for (String word : pos) {
-            if (userInput.contains(word)) {
+            if (userInput.indexOf(word) > -1) {
                 System.out.println("positive");
                 break;
+            } else {
+                System.out.println("neutral");
+                break;
             }
-        }
-
-        for (String word : neg) {
-            if (userInput.contains(word)) {
-                System.out.println("negative");
+            else {
+                System.out.println("neutral");
                 break;
             }
         }
 
-        System.out.println("neutral");
+            for (String word1 : neg) {
+                if (userInput.indexOf(word1) > -1) {
+                    System.out.println("negative");
+                    break;
+                }
+                else {
+                    System.out.println("neutral");
+                    break;
+                }
+            }
+        }
     }
 }
 
