@@ -12,7 +12,8 @@ public class KeinaCyrstalProject {
     public static void posOrNeg() throws IOException{
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Type your comment here: ");
-        String userInput = myScanner.next().toLowerCase();
+        String userInput = myScanner.nextLine().toLowerCase();
+        System.out.println(userInput);
 
         File positive = new File("positive.txt");
         Scanner po = new Scanner(positive);
@@ -33,14 +34,14 @@ public class KeinaCyrstalProject {
         }
 
         for (String word : pos) {
-            if (userInput.indexOf(word) > -1) {
+            if (userInput.contains(word)) {
                 System.out.println("positive");
                 break;
             }
         }
 
         for (String word : neg) {
-            if (userInput.indexOf(word) > -1) {
+            if (userInput.contains(word)) {
                 System.out.println("negative");
                 break;
             }
