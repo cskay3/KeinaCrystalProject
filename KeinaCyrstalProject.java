@@ -9,7 +9,7 @@ public class KeinaCyrstalProject {
         posOrNeg();
     }
 
-    public static void posOrNeg() throws IOException{
+    public static void posOrNeg() throws IOException {
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Type your comment here: ");
         String userInput = myScanner.nextLine().toLowerCase();
@@ -32,19 +32,34 @@ public class KeinaCyrstalProject {
             neg.add(ne.nextLine());
         }
 
+        int counter = 0;
+        int tbd = 5;
+
         for (String word : pos) {
+            counter++;
             if (userInput.indexOf(word) > -1) {
                 System.out.println("positive");
                 break;
             }
+            if (counter == pos.size()) {
+                tbd = 0;
+            }
+
+            for (String word1 : neg) {
+                counter++;
+                if (userInput.indexOf(word1) > -1) {
+                    System.out.println("negative");
+                    break;
+                }
+                if (counter == neg.size()) {
+                    tbd = 1;
+                }
+
+            }
         }
 
-        for (String word : neg) {
-            if (userInput.indexOf(word) > -1) {
-                System.out.println("negative");
-                break;
-            }
+        if (tbd == 0 || tbd == 1){
+            System.out.println("neutral");
         }
     }
 }
-
