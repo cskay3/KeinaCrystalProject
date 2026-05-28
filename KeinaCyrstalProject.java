@@ -35,6 +35,7 @@ public class KeinaCyrstalProject {
         int counterpos = 0;
         int counterneg = 0;
 
+
         for (String word : pos) {
             if (userInput.indexOf(word) > -1) {
                 System.out.println("positive");
@@ -44,18 +45,18 @@ public class KeinaCyrstalProject {
                 counterpos++;
             }
 
-
         }
+        if (counterpos == pos.size()) {
             for (String word1 : neg) {
                 if (userInput.indexOf(word1) > -1) {
                     System.out.println("negative");
                     break;
-                }
-                else{
+                } else {
                     counterneg++;
                 }
 
             }
+        }
 
         if ((counterpos == pos.size()) || (counterneg == neg.size())){
             System.out.println("neutral");
