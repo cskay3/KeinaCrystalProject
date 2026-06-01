@@ -148,3 +148,10 @@ savage
 scared
 selfish
 shallow
+public class todo {
+
+        ArrayList<java.lang.String> todolist = new ArrayList<String>();
+        Scanner myScanner = new Scanner(System.in);
+        todolist();
+
+    }

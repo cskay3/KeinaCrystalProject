@@ -18,7 +18,7 @@ public class KeinaCyrstalProject {
         int i = 0;
         String[] word = new String[];
         while (i < sentences.length){
-            sentence = sentences[i]
+            sentence = sentences[i];
         }
 
 
